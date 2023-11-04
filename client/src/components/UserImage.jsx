@@ -8,7 +8,7 @@ const UserImage = ({ image, size = "60px" }) => {
                 width={size}
                 height={size}
                 alt="user"
-                src={`http://localhost:4444/assets/${image}`}
+                src={`https://socialme-backend.onrender.com/assets/${image}`}
             />
         </Box>
     );

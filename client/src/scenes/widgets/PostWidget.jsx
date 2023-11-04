@@ -31,7 +31,7 @@ const PostWidget = ({
 
     const patchLike = async () => {
         const response = await fetch(
-            `http://localhost:4444/posts/${postId}/like`, {
+            `https://socialme-backend.onrender.com/posts/${postId}/like`, {
                 method: "PATCH",
                 headers: {
                     Authorization: `Bearer ${token}`,

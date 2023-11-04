@@ -9,7 +9,7 @@ const PostsWidget = ({ userId, isProfile = false}) => {
     const token = useSelector((state) => state.token);
 
     const getPosts = async () => {
-        const response = await fetch("http://localhost:4444/posts", {
+        const response = await fetch("https://socialme-backend.onrender.com/posts", {
             method: "GET",
             headers: { Authorization: `Bearer ${token}`},
         });
@@ -17,7 +17,7 @@ const PostsWidget = ({ userId, isProfile = false}) => {
         dispatch(setPosts({ posts: data }));
     };
     const getUserPosts = async () => {
-        const response = await fetch(`http://localhost:4444/posts/${userId}/posts`, {
+        const response = await fetch(`https://socialme-backend.onrender.com/posts/${userId}/posts`, {
             method: "GET",
             headers: { Authorization: `Bearer ${token}`},
         });
